@@ -7,6 +7,8 @@
 #* Creative commons                                                        *
 #*-------------------------------------------------------------------------*
 import sys
+class Factorial():
+    min,max = 0,0
 
 num = int(input('Escribe un numero: '))
 

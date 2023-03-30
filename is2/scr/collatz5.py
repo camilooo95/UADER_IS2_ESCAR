@@ -1,23 +1,33 @@
 #collatz
 # Importar el módulo pyplot con el alias plt
 import matplotlib.pyplot as plt
+import numpy as np
 
 
-x = int(input('Escribe un numero: '))
+num = int(input('Escribe un numero: '))
 
-while x!= 1:
-    if x % 2 == 0:
-        x = int (x/2)
+while num!= 1:
+    if num % 2 == 0:
+        num = int (num/2)
     else:
-        x = 3*x+1
+        num = 3*num+1
     
-    print(x)
+    print(num)
 
-# Crear la figura y los ejes
-fig, ax = plt.subplots()
-# Dibujar puntos
-ax.scatter(x = [1, 2, 3], y = [3, 2, 1])
-# Guardar el gráfico en formato png
-plt.savefig('diagrama-dispersion.png')
-# Mostrar el gráfico
+# # Crear la figura y los ejes
+# fig, ax = plt.subplots()
+# # Dibujar puntos
+# ax.scatter(x = [num], y = [num])
+# # Guardar el gráfico en formato png
+# plt.savefig('diagrama-dispersion.png')
+# # Mostrar el gráfico
+# plt.show()
+
+x = np.arange(0,10,0.1)
+y = x*np.cos(x)
+
+plt.plot(x,y)
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Lab DLS')
 plt.show()
