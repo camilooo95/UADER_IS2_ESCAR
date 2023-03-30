@@ -7,9 +7,14 @@
 #* Creative commons                                                        *
 #*-------------------------------------------------------------------------*
 import sys
+
+num = int(input('Escribe un numero: '))
+
 def factorial(num): 
-    if num < 0: 
-        print("Factorial de un número negativo no existe")
+    if num < 4: 
+        print("Factorial menor a 4 no")
+    if num > 8: 
+        print("Factorial mayor a 8 no")
 
     elif num == 0: 
         return 1
@@ -27,37 +32,37 @@ if len(sys.argv) == 0:
 num=int(sys.argv[1])
 print("Factorial ",num,"! es ", factorial(num)) 
 
-#53 SCHILY.xattr.com.apple.quarantine=0081;00000000;;
-max = int(input("Find primes up to what number? : "))
-primeList = []
-#for loop for checking each number
-for x in range(2, max + 1):
-	isPrime = True
-	index = 0
-	root = int(x ** 0.5) + 1
-	while index < len(primeList) and primeList[index] <= root:
-		if x % primeList[index] == 0:
-			isPrime = False
-			break
-		index += 1
-	if isPrime:
-		primeList.append(x)
-print(primeList)
-#-------------------------------------------------------------
-# prime number calculator: find the first n primes
-count = int(input("Find how many primes?: "))
-primeList = []
-x = 2
-while len(primeList) < count:
-	isPrime = True
-	index = 0
-	root = int(x ** 0.5) + 1
-	while index < len(primeList) and primeList[index] <= root:
-		if x % primeList[index] == 0:
-			isPrime = False
-			break
-		index += 1
-	if isPrime:
-		primeList.append(x)
-	x += 1
-print(primeList)
+# #53 SCHILY.xattr.com.apple.quarantine=0081;00000000;;
+# max = int(input("Find primes up to what number? : "))
+# primeList = []
+# #for loop for checking each number
+# for x in range(2, max + 1):
+# 	isPrime = True
+# 	index = 0
+# 	root = int(x ** 0.5) + 1
+# 	while index < len(primeList) and primeList[index] <= root:
+# 		if x % primeList[index] == 0:
+# 			isPrime = False
+# 			break
+# 		index += 1
+# 	if isPrime:
+# 		primeList.append(x)
+# print(primeList)
+# #-------------------------------------------------------------
+# # prime number calculator: find the first n primes
+# count = int(input("Find how many primes?: "))
+# primeList = []
+# x = 2
+# while len(primeList) < count:
+# 	isPrime = True
+# 	index = 0
+# 	root = int(x ** 0.5) + 1
+# 	while index < len(primeList) and primeList[index] <= root:
+# 		if x % primeList[index] == 0:
+# 			isPrime = False
+# 			break
+# 		index += 1
+# 	if isPrime:
+# 		primeList.append(x)
+# 	x += 1
+# print(primeList)
