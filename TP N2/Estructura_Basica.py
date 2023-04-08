@@ -2,7 +2,7 @@
 import openai
 #……. [ mas Código de inicialización aqui ] …………
 
-openai.api_key = "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"
+openai.api_key = "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"
 conversation = ""
 TOP_P=1
 FREQ_PENALTY=0
